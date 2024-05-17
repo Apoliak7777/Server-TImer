@@ -1,0 +1,8 @@
+const mongoose = require('mongoose');
+
+const playerSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    expiry: { type: Date, required: true }
+});
+
+module.exports = mongoose.model('Player', playerSchema);
